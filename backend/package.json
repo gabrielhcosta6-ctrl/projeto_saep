@@ -6,14 +6,19 @@
   },
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "API REST para gerenciamento de chamados técnicos de suporte (Simulado SAEP SENAI)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "API",
+    "node.js",
+    "Mysql",
+    "crud"
+  ],
+  "author": "Gabriel Henrique",
   "license": "ISC",
   "type": "commonjs"
 }
