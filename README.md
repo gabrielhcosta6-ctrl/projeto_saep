@@ -1,7 +1,7 @@
 # Sistema de Gerenciamento de Chamados Técnicos
 
-## Integrantes
-- Desenvolvedor SAEP
+## Integrante
+- Gabriel Henrique
 
 ## Tecnologias Utilizadas
 - **Backend:** Node.js, Express, MySQL2, CORS
@@ -11,17 +11,17 @@
 ## Instruções para Executar
 
 ### Configuração do Banco de Dados
-1. Execute o script contido em `script.sql` no seu banco de dados MySQL para gerar as tabelas.
+1. Executei o script contido em script.sql no seu banco de dados MySQL para gerar as tabelas.
 
 ### Executando o Backend
-1. Abra o terminal na pasta `backend`.
-2. Execute `npm install` para baixar as dependências.
-3. Inicie o servidor com `node server.js`.
-4. O servidor rodará na porta `3000`.
+1. abri o terminal na pasta backend.
+2. Executei npm install para baixar as dependências.
+3. Iniciei o servidor com node server.js.
+4. O servidor rodou na porta 3000.
 
 ### Executando o Frontend
-1. Abra o arquivo `frontend/index.html` diretamente no navegador.
-2. Utilize as credenciais padrão para logar:
+1. Abri o arquivo frontend/index.html diretamente no navegador.
+2. Utilizei as credenciais padrão para logar:
    - **E-mail:** `admin@suporte.com`
    - **Senha:** `123456`
 
