@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Suporte Técnico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 400px; margin-top: 100px;">
+        <h2>Login - Suporte</h2>
+        <div id="msgErro" class="erro"></div>
+        <form id="formLogin">
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label>Senha:</label>
+                <input type="password" id="senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('formLogin').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const res = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, senha })
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                localStorage.setItem('usuario', JSON.stringify(data.usuario));
+                window.location.href = 'dashboard.html';
+            } else {
+                document.getElementById('msgErro').innerText = data.mensagem;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --border: #334155;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  padding: 30px 15px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 28px 0 14px 0;
+  color: var(--accent);
+}
+
+/* Cards do Dashboard */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--bg-main);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card b {
+  display: block;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-top: 6px;
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Botões */
+button {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button.danger {
+  background-color: var(--danger);
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+button.danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background-color: var(--bg-main);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th {
+  background-color: #1e293b;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: left;
+  padding: 14px;
+  border-bottom: 2px solid var(--border);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+td select {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+/* Mensagens de Erro */
+.erro {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+/* Oculta a caixa quando estiver vazia */
+.erro:empty {
+  display: none;
+}
